@@ -1,0 +1,17 @@
+.cta-btn {
+    padding: 10px 30px;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    font-size: var(--fs-small);
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    border: 2px solid var(--accent-color);
+    background-color: var(--text-color);
+    color: var(--accent-color);
+}

@@ -1,0 +1,27 @@
+.review-card {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 365px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-card.featured {
+    max-width: 400px;
+    min-height: 190px;
+}
+
+.review-name {
+    margin: 0;
+    font-weight: 600;
+}
+
+.review-text {
+    margin: 0;
+    font-size: var(--fs-small);
+    line-height: 1.5;
+}

@@ -1,0 +1,30 @@
+.hashtag-strip {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hashtag-item {
+    color: var(--accent-color);
+    font-weight: bolder;
+    margin-right: 50px;
+}
+
+.hashtag-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation-name: hashtag-marquee;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hashtag-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
