@@ -1,11 +1,16 @@
 import { useState } from "react";
 import "./card.css";
+import { Heart } from "lucide-react";
 
  const Card = ({ title, price, image})  => {
   const [added, setAdded] = useState(false);
+  const [liked, setLiked] = useState(false);
 
   const handleClick = () => {
     setAdded((prev) => !prev);      
+  };
+    const handleLike = () => {
+    setLiked((prev) => !prev);
   };
 
   return (
@@ -18,12 +23,24 @@ import "./card.css";
           <span className="menu-card-price">{price}$</span>
         </div>
 
+
+        <div className="btns-container">
         <button
           className={`menu-card-btn ${added ? "menu-card-btn-added" : ""}`}
           onClick={handleClick}
         >
           {added ? "Added To Cart" : "Add To Cart"}
         </button>
+        <Heart
+            size={30}
+            onClick={handleLike}
+            stroke="white"
+            fill={liked ? "var(--accent-color)" : "var(--secondary-color"}
+            style={{
+              cursor: "pointer",
+            }}
+          />
+      </div>
       </div>
     </div>
   );

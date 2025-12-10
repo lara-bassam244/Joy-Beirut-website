@@ -7,12 +7,13 @@
     gap: 30px;
     max-width: 400px;
     min-width: 100px;
-    transition: .2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .menu-card:hover {
     background-color: transparent;
-    border: 2px solid var(--accent-color);
+    outline: 2px solid var(--accent-color);
+    outline-offset: -1px;
 }
 
 .menu-card-image {
@@ -40,13 +41,14 @@
 .menu-card-title,
 .menu-card-price {
     color: var(--text-color);
-    transition: color 0.2s ease;
+    transition: color 0.1s ease;
 }
 
 .menu-card:hover .menu-card-title,
 .menu-card:hover .menu-card-price {
     color: var(--accent-color);
 }
+
 
 .menu-card-title {
     font-weight: 700;
@@ -65,7 +67,7 @@
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
 }
 
 .menu-card-btn:hover:not(:disabled) {
@@ -75,4 +77,11 @@
 .menu-card-btn-added {
     background-color: var(--secondary-color);
     cursor: default;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }

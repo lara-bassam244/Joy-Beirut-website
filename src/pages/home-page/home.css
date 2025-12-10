@@ -161,7 +161,7 @@
 }
 
 .best-sellers h3 {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-size: var(--fs-large);
 }
 
@@ -174,7 +174,23 @@
 }
 
 .loyalty-card {
-    background: url("pattern.png") center/cover no-repeat;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.card-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container img {
+    max-width: 70%;
+    height: auto;
 }
 
 .loyalty-card-title {
@@ -188,14 +204,14 @@
 }
 
 .loyalty-card-title p {
-    color: var(--accent-color);
+    color: var(--text-color);
     font-weight: 500;
     line-height: 30px;
 }
 
 .loyalty-card-title h3 {
-    font-size: var(--fs-large);
-    color: var(--primary-color);
+    font-size: var(--fs-extra-large);
+    color: var(--text-color);
 }
 
 .customization-title {
@@ -257,13 +273,6 @@
     color: var(--secondary-color);
 }
 
-.review-row {
-    padding: 30px;
-    display: flex;
-    gap: 43px;
-    justify-content: center;
-    align-items: center;
-}
 
 @media (max-width: 768px) {
     .hero-left-side {
@@ -303,6 +312,28 @@
 
     .reviews {
         padding: 7px 0px 0px 0px;
+    }
+
+    .loyalty-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .card-container,
+    .loyalty-card-title {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0;
+    }
+
+    .loyalty-card-title {
+        align-items: center;
+        text-align: center;
+    }
+
+    .review-row svg {
+        display: none;
     }
 
 

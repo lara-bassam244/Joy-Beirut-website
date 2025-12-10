@@ -1,27 +1,43 @@
-.review-card {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 365px;
-    min-height: 140px;
+.review-row {
+    padding: 30px 0;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-arrow {
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+.review-card {
+    border-radius: 10px;
+    color: var(--text-color);
+    min-width: 260px;
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .review-card.featured {
-    max-width: 400px;
-    min-height: 190px;
+    background-color: var(--accent-color);
+    padding: 40px;
+    width: 430px;
+    height: 200px;
+}
+
+.review-card.side {
+    background-color: #4e6f82;
+    padding: 28px 38px;
+    opacity: 0.9;
+    width: 404px;
+    height: 150px;
 }
 
 .review-name {
-    margin: 0;
-    font-weight: 600;
-}
-
-.review-text {
-    margin: 0;
-    font-size: var(--fs-small);
-    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 10px;
 }

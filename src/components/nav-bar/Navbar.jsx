@@ -2,6 +2,7 @@ import { ShoppingCart,CircleUserRound, Menu, X, Search} from 'lucide-react';
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import './navbar.css';
+import PopUp from '../pop-up/PopUp';
 
 const navLinks = [
     {label: "About Us", path: '/About'},
@@ -12,8 +13,16 @@ const navLinks = [
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [showAuth, setShowAuth] = useState(false);
+    const [authMode, setAuthMode] = useState('signin');
+
+    const openSignIn = () => {
+        setAuthMode('signin');
+        setShowAuth(true);
+    };
 
     return (
+        <>
         <nav className='nav-bar'>
             <div className='nav-container'>
             <img src="/joybeirut.png" alt="joy beirut logo" />
@@ -26,7 +35,7 @@ const Navbar = () => {
                 ))}
                 <li className='nav-actions'><Search/></li>
                 <li className='nav-actions'><Link to="/Cart"><ShoppingCart/></Link></li>
-                <li className='nav-actions'> <Link to="/Cart"><CircleUserRound/></Link></li>
+                <li className='nav-actions' onClick={openSignIn}><CircleUserRound/></li>
             </ul>
 
             <button 
@@ -52,16 +61,33 @@ const Navbar = () => {
                     to={link.path}
                      onClick={() => setOpen(false)}>{link.label}</Link>
                 ))}
-         <Link to="/Cart" onClick={() => setOpen(false)}>
-          <ShoppingCart />
-        </Link>
+         <button
+            type="button"
+            className="mobile-user-btn"
+            onClick={() => {
+              setOpen(false);
+              openSignIn();
+            }}
+          >
+            <CircleUserRound />
+          </button>
 
         <Link to="/Cart" onClick={() => setOpen(false)}>
           <CircleUserRound />
         </Link>
 
             </div>
-        </nav>
+            </nav>
+             <PopUp
+        isOpen={showAuth}
+        mode={authMode}
+        onClose={() => setShowAuth(false)}
+        onSwitchMode={() =>
+          setAuthMode((prev) => (prev === "signin" ? "signup" : "signin"))
+        }
+      />
+        </>
+        
     )
 }
 

@@ -1,4 +1,4 @@
-import { Instagram, Phone  } from 'lucide-react';
+import { Instagram, Phone, CircleChevronRight, CircleChevronLeft } from 'lucide-react';
 import './home.css';
 import Navbar from '../../components/nav-bar/Navbar';
 import Hashtag from '../../components/hashtagStrip/Hashtag'
@@ -6,8 +6,43 @@ import Button from '../../components/cta-btn/Button'
 import Card from '../../components/cards/Card';
 import ReviewCard from '../../components/review-card/ReviewCard';
 import Footer from '../../components/footer/Footer';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';
+
+
+const reviews = [
+  {
+    id: 1,
+    name: "Lila M.",
+    text: "“Absolutely love this place! The coffee is perfect & the flower bouquets make every visit special.”",
+  },
+  {
+    id: 2,
+    name: "Nour A.",
+    text: "“The customizable loyalty cards are such a cute touch. Makes every visit feel personal and rewarding.”",
+  },
+  {
+    id: 3,
+    name: "Sami R.",
+    text: "“Such a cozy spot! I keep coming back just for the vibe and the little bursts of joy in every corner.”",
+  },
+];
+
 const Home = () => {
 
+const [activeIndex,setActiveIndex]=useState(1);
+
+const prevIndex = (activeIndex - 1 + reviews.length) % reviews.length;
+const nextIndex = (activeIndex + 1) % reviews.length;
+
+const handlePrev = () => {
+  setActiveIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+}
+
+const handleNext = () => {
+    setActiveIndex((prev) =>(prev + 1) % reviews.length);
+  };
 const items = [
   {
     id: 1,
@@ -29,25 +64,6 @@ const items = [
   },
 ];
 
-const reviews = [
-  {
-    id: 1,
-    name: "Maya",
-    text: "Joy Beirut has become my go-to coffee shop. Their lattes are addictive and the staff are always friendly.",
-  },
-  {
-    id: 2,
-    name: "Karim",
-    text: "The atmosphere, the colors, the flowers, everything makes you want to slow down and enjoy the moment. Their Bundle of Joy box is the cutest thing ever!",
-  },
-  {
-    id: 3,
-    name: "Lea",
-    text: "Every visit feels like a little celebration. You can tell everything is made with love,",
-  },
-];
-
-
 
     return (
         <>
@@ -57,6 +73,7 @@ const reviews = [
         <div className='hero-content'>
             <div className='hero-left-side'>
                 <div className='socials'>
+                <FontAwesomeIcon icon={faTiktok} style={{ fontSize: "20px" }} />
                 <a href="#"><Instagram size={18} /></a>
                 <a href="#">< Phone  size={18} /></a>
                 <p className="hero-side-text">Drink it. Feel it. Gift it. Your joy starts here.</p>
@@ -128,6 +145,9 @@ const reviews = [
            <p>Our loyalty cards are customizable so you can make them your own. Each visit earns a little reward and brings you closer to the treats we love sharing at Joy Beirut.</p>
            <Button to='/card'>Create Your Own</Button>
            </div>
+           <div className='card-container'>
+           <img src="/loyaltyCard.png" alt="card image" />
+           </div>
         </section>
 
         <section className='customization-box'>
@@ -145,19 +165,42 @@ const reviews = [
           </div>
         </section>
 
-        <section className='reviews'>
-          <h3 className='brand-font'>From Our Visitors</h3>
-          <div className='review-row'>
-            {reviews.map((review, index) =>(
-            <ReviewCard
-            key={review.id}
-            name={review.name}
-            text={review.text}
-            variant={index === 1 ? "featured" : "normal"}
+        <section className="reviews">
+        <h3 className="brand-font">From Our Visitors</h3>
+
+        <div className="review-row">
+          <CircleChevronLeft
+            size={60}
+            className="review-arrow"
+            onClick={handlePrev}
           />
-          ))}
-          </div>
-        </section>
+
+          <ReviewCard
+            name={reviews[prevIndex].name}
+            text={reviews[prevIndex].text}
+            variant="side"
+          />
+
+          <ReviewCard
+            name={reviews[activeIndex].name}
+            text={reviews[activeIndex].text}
+            variant="featured"
+          />
+
+          <ReviewCard
+            name={reviews[nextIndex].name}
+            text={reviews[nextIndex].text}
+            variant="side"
+          />
+
+          <CircleChevronRight
+            size={60}
+            className="review-arrow"
+            onClick={handleNext}
+          />
+        </div>
+      </section>
+
         <Footer/>
         </>
     )

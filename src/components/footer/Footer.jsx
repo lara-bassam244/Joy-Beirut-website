@@ -1,5 +1,7 @@
 import { Instagram, Phone } from "lucide-react";
 import "./footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
@@ -46,6 +48,7 @@ export default function Footer() {
           <div className="footer-icons">
             <a href="#"><Phone size={24} /></a>
             <a href="#"><Instagram size={24} /></a>
+            <FontAwesomeIcon icon={faTiktok} style={{ fontSize: "25px" }} />
           </div>
         </div>
       </div>
