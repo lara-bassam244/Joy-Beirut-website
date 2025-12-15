@@ -85,3 +85,29 @@
     align-items: center;
     width: 100%;
 }
+
+.menu-card--community {
+    max-width: 520px;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 24px;
+}
+
+.menu-card--community .menu-card-body {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-card--community .menu-card-row {
+    justify-content: center;
+}
+
+.menu-card--community .btns-container {
+    justify-content: center;
+}
+
+.menu-card--community .menu-card-btn {
+    padding: 12px 28px;
+    border-radius: 40px;
+}

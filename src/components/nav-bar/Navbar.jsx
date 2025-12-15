@@ -5,10 +5,14 @@ import './navbar.css';
 import PopUp from '../pop-up/PopUp';
 
 const navLinks = [
-    {label: "About Us", path: '/About'},
-    {label: "Joy Bundles", path: '/Bundles'},
+    {label: "Home", path: '/'},
     {label: "Menu", path: '/Menu'},
-    {label: "Contact Us", path: '/Contact'},
+    {label: "About Us", path: '/About'},
+    {label: "Community", path: '/Community'},
+    {label: "Florals", path: '/Florals'},
+    {label: "Joy Bundles", path: '/Bundles'},
+    {label: "Contact Us", path: '/Contact'}
+
 ];
 
 const Navbar = () => {
@@ -34,7 +38,7 @@ const Navbar = () => {
                     </li>
                 ))}
                 <li className='nav-actions'><Search/></li>
-                <li className='nav-actions'><Link to="/Cart"><ShoppingCart/></Link></li>
+                <li className='nav-actions'><Link to="/cart"><ShoppingCart/></Link></li>
                 <li className='nav-actions' onClick={openSignIn}><CircleUserRound/></li>
             </ul>
 

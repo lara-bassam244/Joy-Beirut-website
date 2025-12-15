@@ -1,0 +1,328 @@
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/pattern2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* Contact Container - Two Column Layout */
+.contact-container {
+    flex: 1;
+    display: flex;
+    max-width: 1400px;
+    margin: 80px auto 0;
+    width: 100%;
+    gap: 200px;
+    padding: 100px 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Left Side - Contact Form */
+.contact-form-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.contact-form-header .flower-icon {
+    margin-bottom: -10px;
+}
+
+.contact-form-header .brand-font {
+    font-family: 'ThousandBrands';
+    font-size: 62px;
+    color: #F37123;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.flower-icon {
+    width: 55.78px;
+    height: 52.24px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: -8px;
+    flex-shrink: 0;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #0E6CB4;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-field {
+    width: 624px;
+    height: 51px;
+}
+
+.form-input::placeholder {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: #0a4e8a;
+    box-shadow: 0 0 0 3px rgba(14, 108, 180, 0.2);
+}
+
+.form-textarea {
+    resize: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    border-radius: 21px !important;
+    overflow: auto;
+    transition: height 0.2s ease;
+}
+
+.form-textarea:focus {
+    resize: both;
+}
+
+#message-input {
+    width: 100% !important;
+    height: 248px !important;
+}
+
+.submit-btn {
+    padding: 21.401px 0px 25px;
+    width: 162px;
+    height: 31px;
+    background-color: #0E6CB4;
+    color: #FFF7E6;
+    border: none;
+    border-radius: 107.005px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.6812px;
+    line-height: 31px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.submit-btn:hover {
+    background-color: #0a4e8a;
+    box-shadow: 0 6px 20px rgba(14, 108, 180, 0.3);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Right Side - Map Section */
+.contact-map-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    min-height: 550px;
+}
+
+.contact-map-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.contact-map-header .brand-font {
+    font-family: 'ThousandBrands';
+    font-size: 62px;
+    color: #F37123;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.map-subtext {
+    text-align: center;
+    font-size: 35px;
+    color: #0E6CB4;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+}
+
+.form-subtext {
+    text-align: center;
+    font-size: 35px;
+    color: #0E6CB4;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
+.map-container {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .contact-form-side,
+    .contact-map-side {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contact-form-header .brand-font,
+    .contact-map-header .brand-font {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, rgba(255, 245, 241, 0.8) 100%);
+    }
+
+    .contact-container {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .contact-form-side,
+    .contact-map-side {
+        padding: 35px 25px;
+    }
+
+    .contact-form-header,
+    .contact-map-header {
+        gap: 10px;
+    }
+
+    .contact-form-header .brand-font,
+    .contact-map-header .brand-font {
+        font-size: 28px;
+    }
+
+    .flower-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .form-input {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 20px 15px;
+    }
+
+    .contact-form-side,
+    .contact-map-side {
+        padding: 25px 20px;
+    }
+
+    .contact-form-header,
+    .contact-map-header {
+        gap: 8px;
+    }
+
+    .contact-form-header .brand-font,
+    .contact-map-header .brand-font {
+        font-size: 22px;
+    }
+}
+
+.success-message {
+    text-align: center;
+    font-size: 16px;
+    color: #0E6CB4;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 10px 0 0 0;
+    font-weight: 500;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.form-input {
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.form-textarea {
+    min-height: 120px;
+}

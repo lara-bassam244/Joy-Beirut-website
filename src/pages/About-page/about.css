@@ -1,0 +1,351 @@
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-hero {
+    background-image: url('/pattern3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding: 150px 40px 60px;
+    width: 100%;
+}
+
+.about-hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-left: 0;
+}
+
+.about-hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    flex: 1;
+    max-width: 600px;
+    padding: 10px 50px;
+}
+
+.about-hero h1 {
+    font-family: 'ThousandBrands';
+    font-size: var(--fs-extra-large);
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.about-hero-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    flex: 1;
+    object-fit: contain;
+    margin: 30px 30px 30px 50px;
+}
+
+/* About Banner Two Section */
+.about-banner-two {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.about-banner-two-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-banner-two-image {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex: 1;
+    margin: 30px 50px 30px 30px;
+}
+
+.about-banner-two-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    max-width: 600px;
+    padding: 0;
+}
+
+.about-banner-two h2 {
+    font-family: 'ThousandBrands';
+    font-size: var(--fs-extra-large);
+    color: var(--text-color);
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.about-banner-two h2 span {
+    color: var(--secondary-color);
+}
+
+.about-banner-two p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* About Banner Three Section */
+.about-banner-three {
+    background-image: url('/pattern3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+}
+
+.about-banner-three-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-left: 0;
+}
+
+.about-banner-three-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    flex: 1;
+    max-width: 600px;
+    padding: 10px 50px;
+}
+
+.about-banner-three h2 {
+    font-family: 'ThousandBrands';
+    font-size: var(--fs-extra-large);
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.about-banner-three h2 span {
+    color: var(--secondary-color);
+}
+
+.about-banner-three p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.about-banner-three-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    flex: 1;
+    object-fit: contain;
+    margin: 30px 30px 30px 50px;
+}
+
+/* Flower Divider */
+.flower-divider {
+    position: relative;
+    height: 0;
+    margin: 0 0 -40px 0;
+    z-index: 100;
+}
+
+/* Flower Tag Track */
+.flower-tag-track {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: auto;
+    z-index: 100;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 120px 20px 40px;
+    }
+
+    .about-hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+
+    .about-hero-image {
+        max-width: 300px;
+    }
+
+    .about-banner-two {
+        padding: 60px 20px;
+    }
+
+    .about-banner-two-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-banner-two-text {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-banner-two h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .about-banner-two p {
+        font-size: 16px;
+    }
+
+    .about-banner-two-image {
+        max-width: 250px;
+    }
+
+    .about-banner-three {
+        padding: 120px 20px 40px;
+    }
+
+    .about-banner-three-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-banner-three-text {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-banner-three h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .about-banner-three p {
+        font-size: 16px;
+    }
+
+    .about-banner-three-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 100px 15px 30px;
+    }
+
+    .about-hero-content {
+        gap: 20px;
+    }
+
+    .about-hero-text {
+        padding: 0;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .about-hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .about-hero-image {
+        max-width: 250px;
+        margin: 0;
+    }
+
+    .about-banner-two {
+        padding: 40px 15px;
+    }
+
+    .about-banner-two-text {
+        padding: 0;
+    }
+
+    .about-banner-two h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .about-banner-two p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .about-banner-two-image {
+        max-width: 200px;
+    }
+
+    .about-banner-three {
+        padding: 100px 15px 30px;
+    }
+
+    .about-banner-three-content {
+        gap: 20px;
+    }
+
+    .about-banner-three-text {
+        padding: 0;
+    }
+
+    .about-banner-three h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .about-banner-three p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .about-banner-three-image {
+        max-width: 250px;
+        margin: 0;
+    }
+}

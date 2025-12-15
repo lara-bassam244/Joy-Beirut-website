@@ -1,0 +1,258 @@
+.title-page {
+    font-size: var(--fs-large);
+    font-family: "ThousandBrands";
+    color: var(--secondary-color);
+    font-weight: 100;
+}
+
+.customization-title-container {
+    background-color: var(--primary-color);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.customization-title-container p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 500px;
+    color: var(--text-color);
+    font-size: var(--fs-medium);
+    line-height: 30px;
+}
+
+.customization-page {
+    padding: 26px 0 60px;
+    background: url("/pattern.png");
+}
+
+.customization-grid {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    align-items: start;
+}
+
+.custom-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.custom-box-img {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+}
+
+.custom-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.controls-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 22px;
+    align-items: baseline;
+}
+
+.control-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accent {
+    font-family: "Thousand Brands";
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+.control-title {
+    display: flex;
+    align-items: center;
+}
+
+.control-sub {
+    font-weight: 500;
+}
+
+.pill-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.pill {
+    width: 105px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 30px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.active {
+    color: var(--secondary-color);
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+.pill:hover {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.input-dark {
+    color: var(--text-color);
+    background: var(--accent-color);
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.textarea-dark {
+    background-color: var(--accent-color);
+    border-radius: 30px;
+    height: 100px;
+    text-align: center;
+    color: var(--text-color);
+    padding-top: 40px;
+}
+
+.textarea-dark::placeholder {
+    text-align: center;
+}
+
+.add-to-cart {
+    background: var(--secondary-color);
+    border-radius: 20px;
+    border: none;
+    padding: 10px 0px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.customisation-title {
+    font-family: "Thousand Brands";
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+}
+
+.controls-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "budget date"
+        "size   letter"
+        "custom add";
+    gap: 18px 22px;
+    align-items: start;
+}
+
+.budget-area {
+    grid-area: budget;
+}
+
+.date-area {
+    grid-area: date;
+}
+
+.size-area {
+    grid-area: size;
+}
+
+.letter-area {
+    grid-area: letter;
+}
+
+.custom-area {
+    grid-area: custom;
+}
+
+.add-area {
+    grid-area: add;
+}
+
+.category-stack {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.items-grid {
+    display: flex;
+    background: var(--accent-color);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.items-grid {
+    margin-top: 20px;
+    background: var(--accent-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.item-tile {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.item-float-img {
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 80px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.item-label-card {
+    background: var(--primary-color);
+    border-radius: 7px;
+    height: 80px;
+    width: 90px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+}
+
+.item-label {
+    margin: 0;
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: center;
+    font-size: var(--fs-small);
+}
+
+.item-tile.active .item-label-card {
+    outline: 2px solid var(--secondary-color);
+}

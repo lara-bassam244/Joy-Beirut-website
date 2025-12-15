@@ -1,0 +1,133 @@
+.increase-decrease-controls {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    background: #115A91;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin: -20px 10px;
+}
+
+/* Minus Button - Left circular button with exact Figma padding */
+.dec-btn {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: #F37123;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s ease;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+}
+
+.dec-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.08);
+}
+
+.dec-btn:active {
+    transform: scale(0.95);
+}
+
+/* Plus Button - Right circular button with exact Figma padding (mirrored) */
+.inc-btn {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: #F37123;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s ease;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+}
+
+.inc-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.08);
+}
+
+.inc-btn:active {
+    transform: scale(0.95);
+}
+
+/* SVG/Vector styling for the minus sign */
+.dec-btn::before {
+    content: '';
+}
+
+/* SVG/Vector styling for the plus sign */
+.inc-btn::before {
+    content: '';
+}
+
+/* Quantity Display - Center with exact Figma specs */
+.qty-display {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    background: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .increase-decrease-controls {
+        width: 140px;
+        height: 40px;
+    }
+
+    .dec-btn,
+    .inc-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+
+    .qty-display {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .increase-decrease-controls {
+        width: 130px;
+        height: 36px;
+    }
+
+    .dec-btn,
+    .inc-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+
+    .qty-display {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

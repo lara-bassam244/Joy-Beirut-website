@@ -1,0 +1,229 @@
+.cart-page {
+    background: url("/pattern.png");
+    padding: 120px 0 80px;
+}
+
+.cart-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.cart-left-title {
+    font-family: "ThousandBrands";
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cart-head-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 40px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 40px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-product img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.cart-product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-product-name {
+    font-weight: 600;
+}
+
+.cart-product-sub {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.qty-num {
+    font-weight: 600;
+}
+
+.cart-price {
+    font-weight: 600;
+}
+
+.cart-remove {
+    padding: 7px;
+    border-radius: 30px;
+    color: var(--text-color);
+    background: var(--accent-color);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart-subtotal-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.cart-empty {
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+
+.cart-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cart-right-title {
+    font-family: "ThousandBrands";
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: var(--secondary-color);
+}
+
+.cart-orange-box {
+    background: var(--secondary-color);
+    border-radius: 35px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cart-label {
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.cart-dark-input {
+    background: var(--accent-color);
+    border-radius: 25px;
+    border: none;
+    padding: 14px 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.cart-dark-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cart-dark-input.small {
+    padding: 12px 16px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-header-title {
+    color: white;
+    font-weight: 600;
+}
+
+.card-divider {
+    height: 2px;
+    width: 100%;
+    background: white;
+    opacity: 0.5;
+}
+
+.cart-two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.cart-check-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    color: white;
+}
+
+.cart-check-row input {
+    accent-color: var(--primary-color);
+}
+
+.pay-btn {
+    margin-top: 10px;
+    align-self: center;
+    width: 70%;
+    padding: 12px 0;
+    border-radius: 30px;
+    border: none;
+    background: var(--secondary-color);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pay-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .pay-btn {
+        width: 100%;
+    }
+}
