@@ -9,7 +9,6 @@ const navLinks = [
     {label: "Menu", path: '/Menu'},
     {label: "About Us", path: '/About'},
     {label: "Community", path: '/Community'},
-    {label: "Florals", path: '/Florals'},
     {label: "Joy Bundles", path: '/Bundles'},
     {label: "Contact Us", path: '/Contact'}
 

@@ -147,6 +147,7 @@
     padding: 10px 0px;
     color: var(--text-color);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .customisation-title {
@@ -255,4 +256,124 @@
 
 .item-tile.active .item-label-card {
     outline: 2px solid var(--secondary-color);
+}
+
+@media (max-width: 950px) {
+    .customization-title-container {
+        height: auto;
+        padding: 40px 16px;
+    }
+
+    .customization-page {
+        padding: 18px 0 50px;
+    }
+
+    .customization-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .custom-left {
+        justify-content: center;
+    }
+
+    .custom-box-img {
+        width: min(420px, 92%);
+    }
+
+    .custom-right {
+        width: 100%;
+    }
+
+    .controls-top {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .controls-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "budget"
+            "date"
+            "size"
+            "letter"
+            "custom"
+            "add";
+        gap: 16px;
+    }
+
+    .pill-row {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .pill {
+        width: auto;
+        min-width: 110px;
+        padding: 0 18px;
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .item-label-card {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .title-page,
+    .customisation-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .customization-title-container p {
+        max-width: 90%;
+        line-height: 26px;
+    }
+
+    .accent {
+        font-size: 1.9rem;
+        margin-right: 10px;
+    }
+
+    .input-dark {
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .textarea-dark {
+        height: 110px;
+        padding-top: 34px;
+        border-radius: 22px;
+    }
+
+    .items-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .item-float-img {
+        width: 120px;
+        height: 85px;
+        top: -24px;
+    }
+
+    .item-label-card {
+        height: 86px;
+        max-width: 180px;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 18px;
+    }
 }
